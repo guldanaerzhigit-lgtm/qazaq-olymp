@@ -1,7 +1,6 @@
 import { getApp, getApps, initializeApp } from 'firebase/app'
 import { getAuth } from 'firebase/auth'
 import { getFirestore } from 'firebase/firestore'
-import { getStorage } from 'firebase/storage'
 
 // Firebase Web configuration for the Qazaq Olymp project.
 // These values identify the web app; authorization is enforced by Firebase Security Rules.
@@ -18,5 +17,4 @@ const firebaseConfig = {
 export const firebaseApp = getApps().length ? getApp() : initializeApp(firebaseConfig)
 export const auth = getAuth(firebaseApp)
 export const db = getFirestore(firebaseApp)
-export const storage = getStorage(firebaseApp)
 export const isFirebaseConfigured = true
