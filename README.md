@@ -6,7 +6,7 @@
 - React + TypeScript + Vite
 - Firebase Authentication
 - Cloud Firestore
-- Firebase Storage
+- Cloudflare R2 (file storage via authenticated Worker)
 - Cloudflare Pages (hosting)
 
 ## Жергілікті іске қосу
@@ -16,6 +16,9 @@
 
 ## Build
 `npm run build`
+
+## Файл сақтау
+Файлдар Firebase Storage-та емес, Cloudflare R2-де сақталады. Қауіпсіз жүктеу Worker коды `workers/r2-upload/` ішінде орналасқан.
 
 ## Қазіргі кезең
 Бастапқы интерфейс және Firebase конфигурациясының үлгісі дайын. Келесі кезеңде Authentication, рөлдер, Firestore Security Rules және олимпиада конструкторы қосылады.
